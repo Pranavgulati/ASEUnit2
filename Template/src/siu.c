@@ -31,13 +31,13 @@ void SIU_Init(void) {
  *                     |_|  \___/|___/ \___/                        *
  *                                                                  *
  ********************************************************************/  
-    /*
-    SIU.PCR[].B.PA = ;
-    SIU.PCR[].B.IBE = ;
-    SIU.PCR[].B.OBE = ;
     
-    SIU.PCR[].B.PA = ;
-    SIU.PCR[].B.IBE = ;   
-    SIU.PCR[].B.OBE = ;
-    */
+    SIU.PCR[16].B.PA = 1;
+    SIU.PCR[16].B.IBE = ;
+    SIU.PCR[16].B.OBE = ;
+    
+    SIU.PCR[17].B.PA = 1;
+    SIU.PCR[17].B.IBE = ;   
+    SIU.PCR[17].B.OBE = ;
+    
 }

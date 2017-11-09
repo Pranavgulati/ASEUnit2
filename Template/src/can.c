@@ -11,15 +11,15 @@ void CANMsgBufInit(void)
  *                                                                  *
  ********************************************************************/
     /* MB Code */
-    //CAN_0.BUF[].CS.B.CODE = ;
+    CAN_0.BUF[0].CS.B.CODE = 0x0C;
     /* Standard format */
-    //CAN_0.BUF[].CS.B.IDE = ;
+    CAN_0.BUF[0].CS.B.IDE =0x00;
     /* SRR */
     //CAN_0.BUF[].CS.B.SRR = ;
     /* Data Frame */
-    //CAN_0.BUF[].CS.B.RTR = ;
+    CAN_0.BUF[0].CS.B.RTR = 0x00;
     /* Data Length */
-    //CAN_0.BUF[].CS.B.LENGTH = ;
+    CAN_0.BUF[0].CS.B.LENGTH =0x04 ; //sending 4 bytes
     /* STD_ID */
     //CAN_0.BUF[].ID.B.STD_ID = ;
 
@@ -36,6 +36,25 @@ void CANMsgBufInit(void)
     CAN_0.RXIMR[0].R = 0;
     
 }
+
+void CAN_Write(int messageBufferNo,unsigned int data){
+    /* MB Code */
+    CAN_0.BUF[messageBufferNo].CS.B.CODE = 0x0C;
+    /* Standard format */
+    CAN_0.BUF[messageBufferNo].CS.B.IDE =0x00;
+    /* SRR */
+    //CAN_0.BUF[].CS.B.SRR = ;
+    /* Data Frame */
+    CAN_0.BUF[messageBufferNo].CS.B.RTR = 0x00;
+    /* Data Length */
+    CAN_0.BUF[messageBufferNo].CS.B.LENGTH =0x04 ; //sending 4 bytes
+    /* STD_ID */
+    //CAN_0.BUF[].ID.B.STD_ID = ;
+    CAN_0.BUF[messageBufferNo].DATA.B[0] = data & 0x00ff;
+    CAN_0.BUF[messageBufferNo].DATA.B[1] = data & 0x0100;
+
+}
+
 
 /********************************************************************
  *                          CAN driver                              *
