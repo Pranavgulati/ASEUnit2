@@ -36,6 +36,9 @@ void CANMsgBufInit(void)
         //configure the filter masks for fifo
         CAN_0.RXFIFO.IDTABLE[0].R = 0x047FFFFF; //enter valid id 4 bytes
         CAN_0.RXIMR[0].R = 0x04080000;
+    #elif
+        //allow all kind message to pass
+        CAN_0.RXIMR[0].R = 0;
     #endif
 
     
