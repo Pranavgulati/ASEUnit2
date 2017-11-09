@@ -1,4 +1,5 @@
 #include "jdp.h"
+#include "main.h"
 
 void CANMsgBufInit(void)
 {
@@ -31,31 +32,37 @@ void CANMsgBufInit(void)
  *                     |_|  \___/|___/ \___/                        *
  *                                                                  *
  ********************************************************************/
+    #if TASK3_3==1
+        //configure the filter masks for fifo
+        CAN_0.RXFIFO.IDTABLE[0].R = 0x047FFFFF; //enter valid id 4 bytes
+        CAN_0.RXIMR[0].R = 0x04080000;
+    #endif
+
     
-    CAN_0.RXFIFO.IDTABLE[0].R = 0;
-    CAN_0.RXIMR[0].R = 0;
     
 }
 
-void CAN_Write(int messageBufferNo,unsigned int data){
+void CAN_Write(int messageBufferNo,txMsgPacket inputMsgPacket){
     /* MB Code */
+    //activate the message buffer
     CAN_0.BUF[messageBufferNo].CS.B.CODE = 0x0C;
     /* Standard format */
-    CAN_0.BUF[messageBufferNo].CS.B.IDE =0x00;
+    CAN_0.BUF[messageBufferNo].CS.B.IDE =0;
     /* SRR */
     //CAN_0.BUF[].CS.B.SRR = ;
     /* Data Frame */
-    CAN_0.BUF[messageBufferNo].CS.B.RTR = 0x00;
+    CAN_0.BUF[messageBufferNo].CS.B.RTR = 0;
     /* Data Length */
-    CAN_0.BUF[messageBufferNo].CS.B.LENGTH =0x04 ; //sending 4 bytes
+    CAN_0.BUF[messageBufferNo].CS.B.LENGTH =0x02 ; //sending 4 bytes
     /* STD_ID */
-    //CAN_0.BUF[].ID.B.STD_ID = ;
-    CAN_0.BUF[messageBufferNo].DATA.B[0] = data & 0x00ff;
-    CAN_0.BUF[messageBufferNo].DATA.B[1] = data & 0x0100;
+    CAN_0.BUF[messageBufferNo].ID.B.STD_ID = inputMsgPacket.standardId ;
+    CAN_0.BUF[messageBufferNo].DATA.B[0] = inputMsgPacket.data & 0x00ff;
+    CAN_0.BUF[messageBufferNo].DATA.B[1] = inputMsgPacket.data & 0x0100;
 
 }
 
-
+//the can module is already in HALT state on reset so configuration can take place
+//otherwise if read masks are to be update then a CAN HALT is required
 /********************************************************************
  *                          CAN driver                              *
  *                                                                  *
