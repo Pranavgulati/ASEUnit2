@@ -33,11 +33,11 @@ void SIU_Init(void) {
  ********************************************************************/  
     
     SIU.PCR[16].B.PA = 1;
-    SIU.PCR[16].B.IBE = ;
-    SIU.PCR[16].B.OBE = ;
+    SIU.PCR[16].B.IBE = 0;
+    SIU.PCR[16].B.OBE = 1;
     
     SIU.PCR[17].B.PA = 1;
-    SIU.PCR[17].B.IBE = ;   
-    SIU.PCR[17].B.OBE = ;
+    SIU.PCR[17].B.IBE = 1 ;   
+    SIU.PCR[17].B.OBE = 0;
     
 }

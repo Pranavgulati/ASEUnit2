@@ -1,0 +1,75 @@
+
+<Debug>
+	<SPC560P50_Test_GenCC_WindRiver>
+		<CodeView TopRow="8436" Focus="4294967295" >
+			<CodeReport>
+				<0>64</0>
+				<1>71</1>
+				<2>38</2>
+				<3>214</3>
+				<4>38</4>
+				<5>82</5>
+														
+			</CodeReport>
+										
+		</CodeView>
+						
+	</SPC560P50_Test_GenCC_WindRiver>
+	<Flags>
+		<Report>
+			<Def Header="FlagReport" NbCol="9" >
+				<Col Type="PT_BOOL" Header="Check" sizeCache="18" AutoSize="0" Edit="1" Sortable="1" Icon="C:\Program Files (x86)\Raisonance\Ride\Config\Resources\check.bmp" />
+				<Col Type="PT_STRING" Header="Kind" sizeCache="DDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="1" />
+				<Col Type="PT_STRING" Header="KindID" sizeCache="DD" AutoSize="1" Edit="0" Sortable="1" Visible="0" />
+				<Col Type="PT_STRING" Header="Space" sizeCache="DDDDDD" AutoSize="1" Edit="0" Sortable="1" />
+				<Col Type="PT_STRING" Header="SpaceID" sizeCache="DD" AutoSize="0" Edit="0" Sortable="0" Visible="0" />
+				<Col Type="PT_STRING" Header="Line" sizeCache="DDDDDDDDD" AutoSize="1" Edit="0" Sortable="1" Visible="1" />
+				<Col Type="PT_STRING" Header="File" sizeCache="DDDDDDDDDDDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="1" Visible="1" />
+				<Col Type="PT_STRING" Header="Path" sizeCache="DDDDDDDDDDDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="0" Visible="0" />
+				<Col Type="PT_STRING" Header="Condition" sizeCache="DDDDDDDDDDDDDDDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="0" />
+				<Col Type="PT_STRING" Header="Condexpr" sizeCache="DD" AutoSize="1" Edit="0" Sortable="0" Visible="0" />
+				<Col Type="PT_STRING" Header="Condcount" sizeCache="DD" AutoSize="1" Edit="0" Sortable="0" Visible="0" />
+							
+			</Def>
+			<Rows/>
+					
+		</Report>
+			
+	</Flags>
+	<Views>
+		<View File="C:\Users\ASE-Lab\Desktop\ASEUnit2\Template\src\main.c" Line="13" Index="0" focus="1" />
+		<View File="C:\Users\ASE-Lab\Desktop\ASEUnit2\Template\src\siu.c" Line="31" Index="1" />
+		<View File="C:\Users\ASE-Lab\Desktop\ASEUnit2\Template\src\can.c" Line="49" Index="2" />
+		<View File="C:\Users\ASE-Lab\Desktop\ASEUnit2\Template\src\pit.c" Line="8" Index="3" />
+	</Views>
+	<Grep>
+		<GrepIncludeSub>yes</GrepIncludeSub>
+		<GrepMatchCase>no</GrepMatchCase>
+		<GrepMatchWhole>no</GrepMatchWhole>
+		<GrepRegExp>no</GrepRegExp>
+		<GrepReplaceMode>no</GrepReplaceMode>
+		<GrepFileTypes>
+			<GrepFileTypesValue>*.c;*.h</GrepFileTypesValue>
+			<GrepFileType>*.c;*.h</GrepFileType>
+		</GrepFileTypes>
+		<GrepFindWhat>
+			<GrepFindWhatValue/>
+		</GrepFindWhat>
+		<GrepFindWhere>
+			<GrepFindWhereValue/>
+			<GrepPathStr>Application Files</GrepPathStr>
+			<GrepPathStr>Application Path</GrepPathStr>
+		</GrepFindWhere>
+		<GrepReplaceWhat>
+			<GrepReplaceWhatValue/>
+		</GrepReplaceWhat>
+	</Grep>
+	<FindStrings>
+		<Find>TASK3_3</Find>
+		<Find>speedMessageStatus</Find>
+		<Find>speedmessageS</Find>
+		<Find>speedMessagesStatus(</Find>
+		<Find>speedMessage</Find>
+	</FindStrings>
+	<ReplaceStrings/>
+</Debug>

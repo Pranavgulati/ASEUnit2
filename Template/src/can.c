@@ -1,5 +1,13 @@
 #include "jdp.h"
-#include "main.h"
+typedef struct{
+	int standardId;
+	int data;
+}txMsgPacket;
+typedef char byte;
+
+#define TASK3_3 0
+#define ENABLE 1
+#define DISABLE 0
 
 void CANMsgBufInit(void)
 {
@@ -34,11 +42,12 @@ void CANMsgBufInit(void)
  ********************************************************************/
     #if TASK3_3==1
         //configure the filter masks for fifo
-        CAN_0.RXFIFO.IDTABLE[0].R = 0x047FFFFF; //enter valid id 4 bytes
-        CAN_0.RXIMR[0].R = 0x04080000;
-    #elif
+        CAN_0.RXFIFO.IDTABLE[0].R = 0x08F; //enter valid id 4 bytes
+        CAN_0.RXIMR[0].R = 0x040FFFFF;
+    #elif TASK3_3==0
         //allow all kind message to pass
-        CAN_0.RXIMR[0].R = 0;
+        CAN_0.RXFIFO.IDTABLE[0].R = 0x047;
+        CAN_0.RXIMR[0].R = 0x00000000;
     #endif
 
     
@@ -48,7 +57,7 @@ void CANMsgBufInit(void)
 void CAN_Write(int messageBufferNo,txMsgPacket inputMsgPacket){
     /* MB Code */
     //activate the message buffer
-    CAN_0.BUF[messageBufferNo].CS.B.CODE = 0x0C;
+    
     /* Standard format */
     CAN_0.BUF[messageBufferNo].CS.B.IDE =0;
     /* SRR */
@@ -60,12 +69,11 @@ void CAN_Write(int messageBufferNo,txMsgPacket inputMsgPacket){
     /* STD_ID */
     CAN_0.BUF[messageBufferNo].ID.B.STD_ID = inputMsgPacket.standardId ;
     CAN_0.BUF[messageBufferNo].DATA.B[0] = inputMsgPacket.data & 0x00ff;
-    CAN_0.BUF[messageBufferNo].DATA.B[1] = inputMsgPacket.data & 0x0100;
+    CAN_0.BUF[messageBufferNo].DATA.B[1] = (inputMsgPacket.data & 0x0100)>>8;
+CAN_0.BUF[messageBufferNo].CS.B.CODE = 0x0C;
 
 }
 
-//the can module is already in HALT state on reset so configuration can take place
-//otherwise if read masks are to be update then a CAN HALT is required
 /********************************************************************
  *                          CAN driver                              *
  *                                                                  *
