@@ -27,7 +27,7 @@
 			"file": "Template/src/can.c",
 			"settings":
 			{
-				"buffer_size": 5261,
+				"buffer_size": 5284,
 				"line_ending": "Windows"
 			}
 		},
@@ -60,8 +60,9 @@
 			"file": "Template/src/main.c",
 			"settings":
 			{
-				"buffer_size": 4581,
-				"line_ending": "Windows"
+				"buffer_size": 4921,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -76,7 +77,8 @@
 			"file": "Template/src/pit.c",
 			"settings":
 			{
-				"buffer_size": 999,
+				"buffer_size": 1098,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -84,16 +86,8 @@
 			"file": "Template/src/siu.c",
 			"settings":
 			{
-				"buffer_size": 1501,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Template/src/spc560p_io.h",
-			"settings":
-			{
-				"buffer_size": 484,
-				"line_ending": "Windows"
+				"buffer_size": 1506,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -137,6 +131,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/spc560p_io.h",
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/can.c",
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/interrupt.c",
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/jdp.h",
@@ -144,7 +139,6 @@
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/me.c",
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/siu.c",
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/pit.c",
-		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/spc560p_io.h",
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/ASEUnit2/Template/src/typedefs.h",
 		"/C/Users/Pranav/Desktop/TUC/Lab for Emb Sys/RaspNet/main.c",
 		"/C/Users/Pranav/Desktop/TUC/ASE/Unit 2/Template/src/init.c",
@@ -172,7 +166,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -203,7 +197,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -212,7 +206,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5261,
+						"buffer_size": 5284,
 						"regions":
 						{
 						},
@@ -233,7 +227,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -263,7 +257,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -293,7 +287,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -309,8 +303,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								161825,
+								161825
 							]
 						],
 						"settings":
@@ -320,10 +314,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 78433.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -332,15 +326,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4581,
+						"buffer_size": 4921,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4487,
+								4487
 							]
 						],
 						"settings":
@@ -349,10 +343,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2295.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -380,7 +374,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -389,15 +383,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 999,
+						"buffer_size": 1098,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								997,
+								997
 							]
 						],
 						"settings":
@@ -407,10 +401,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 135.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -419,7 +413,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1501,
+						"buffer_size": 1506,
 						"regions":
 						{
 						},
@@ -440,39 +434,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "Template/src/spc560p_io.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 484,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"file": "Template/src/typedefs.h",
 					"semi_transient": false,
 					"settings":
@@ -498,7 +464,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

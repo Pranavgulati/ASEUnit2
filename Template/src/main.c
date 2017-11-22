@@ -169,6 +169,9 @@ void Ext_Isr() {
 		case 60:
 			PITCHANNEL1();
 			break;
+		case 60:
+			PITCHANNEL1();
+			break;
 		case 68:
 			FLEXCAN_BUF_00_03();
 			break;
